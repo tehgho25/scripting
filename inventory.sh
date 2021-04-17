@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#authur august
+#authur: august
 if 
 
 echo
