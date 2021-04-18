@@ -21,6 +21,7 @@ echo
 echo "Can we go to the park this afternoon"
 echo
 read f
+echo
 echo "OK good by me"
 echo
 read g
