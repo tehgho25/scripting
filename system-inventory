@@ -1,0 +1,61 @@
+#!/bin/bash
+#Authur: Augustin
+#Date: May 18,2021
+echo
+echo "System inventory"
+echo
+echo "1. Os running and version"
+echo
+echo "$(cat /etc/*release)"
+echo
+echo "2. size of memory"
+echo
+echo "$(free -m)"
+echo
+echo "size of hand drive"
+echo
+echo "$(lsblk)"
+echo
+echo "3. CPU speed"
+echo
+echo "$(lscpu)"
+echo
+echo "CPU speed"
+echo 
+echo "$(lscpu)"
+echo
+echo "kernel version"
+echo
+echo "$(hostnamectl)"
+echo
+echo "System bits"
+echo
+echo "$(getconf LONG_BIT)"
+echo
+echo "Hostname"
+echo
+echo "$(hostname)"
+echo
+echo "The IP address"
+echo
+echo "$(ifconfig)"
+echo
+echo "All opened port"
+echo
+echo "$(netstat -tulpn | grep listen)"
+echo
+echo "DNS"
+echo
+echo "$(cat /etc/resolv.conf)"
+echo
+echo "The Manufactural"
+echo
+echo "$(dmidecode -t system)"
+echo
+echo "System Virtual or Physical"
+echo
+echo "$(lshw | tail -10)"
+echo
+echo "the Mac Address"
+echo
+echo "$(ip link show)"
