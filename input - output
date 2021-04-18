@@ -1,0 +1,34 @@
+#!/bin/bash
+# Read user input
+echo "What is your first name?"
+read a
+echo
+echo "What is your last name?"
+read b
+echo
+echo "Hello $a $b"
+echo
+read c
+echo
+echo "do you like the ice cream $a $b ?"
+echo
+read d
+echo
+echo "I thing the ice cream area delicious"
+echo
+read e
+echo
+echo "Can we go to the park this afternoon"
+echo
+read f
+echo "OK good by me"
+echo
+read g
+echo
+echo "i love you $a"
+echo
+read h
+echo
+echo "bye $a"
+echo
+read i
