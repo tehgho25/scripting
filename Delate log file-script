@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#Description: Delate logs 14 days old from /var/log
+#Authur: serge #Date: May 18,2021
+
+find /opt/backup -type f -mtime +30 -delete 
+exit 0
