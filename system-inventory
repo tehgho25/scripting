@@ -6,11 +6,11 @@ echo "System inventory"
 echo
 echo "1. Os running and version"
 echo
-echo "$(cat /etc/*release)"
+echo "$(cat /etc/*release) | head -3"
 echo
 echo "2. size of memory"
 echo
-echo "$(free -m)"
+echo "$(free -m) | awk {'print $2'}"
 echo
 echo "size of hand drive"
 echo
@@ -22,11 +22,11 @@ echo "$(lscpu)"
 echo
 echo "CPU speed"
 echo 
-echo "$(lscpu)"
+echo "$grep "physical id" /proc/cpuinfo | sort | uniq | wc -l"
 echo
 echo "kernel version"
 echo
-echo "$(hostnamectl)"
+echo "$(hostnamectl | tail -2 | awk '{print $3}')"
 echo
 echo "System bits"
 echo
@@ -59,3 +59,7 @@ echo
 echo "the Mac Address"
 echo
 echo "$(ip link show)"
+echo
+echo Processor speed
+echo
+echo "grep MHz /proc/cpuinfo | sort | awk '{print $NF}' | uniq -c"
